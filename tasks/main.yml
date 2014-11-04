@@ -8,6 +8,7 @@
     name: openssl
     state: present
     update_cache: yes
+    cache_valid_time: 3600
   when: ansible_os_family == 'Debian'
 
 - name: OpenSSL installed (RedHat)
@@ -46,7 +47,7 @@
     creates={{ openssl_certs_path }}/{{ item.name }}.crt
   with_items: openssl_self_signed
 
-- name: Imported SSL keys
+- name: SSL keys imported
   sudo: yes
   copy:
     content: "{{ item.content }}"
@@ -56,7 +57,7 @@
     mode: 0644
   with_items: openssl_import_keys
 
-- name: Imported SSL certificates
+- name: SSL certificates imported
   sudo: yes
   copy:
     content: "{{ item.content }}"
