@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   # Ubuntu 12.04                                          #
   #=======================================================#
   # 64bit
-  #config.vm.box = "ubuntu/precise64"
+  config.vm.box = "ubuntu/precise64"
   # 32bit
   #config.vm.box = "ubuntu/precise32"
   #=======================================================#
@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   # Ubuntu 14.04                                          #
   #=======================================================#
   # 64bit
-  config.vm.box = "ubuntu/trusty64"
+  #config.vm.box = "ubuntu/trusty64"
   # 32bit
   #config.vm.box = "ubuntu/trusty32"
   #=======================================================#

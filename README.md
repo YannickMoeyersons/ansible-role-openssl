@@ -1,5 +1,7 @@
 # Ansible Role: OpenSSL
 
+[![Build Status](https://travis-ci.org/novuso/ansible-role-openssl.svg)](https://travis-ci.org/novuso/ansible-role-openssl)
+
 An Ansible Role that manages SSL certificates on RedHat/CentOS/Debian/Ubuntu.
 
 ## Requirements
