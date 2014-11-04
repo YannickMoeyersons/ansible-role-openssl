@@ -1,0 +1,22 @@
+---
+language: python
+python: "2.7"
+
+env:
+  - PLAYS=playbook.yml
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  - pip install ansible
+
+script:
+  - "cd tests"
+  - "ansible-playbook $PLAYS --syntax-check"
+  - "ansible-playbook $PLAYS --connection=local"
+  - >
+    ansible-playbook $PLAYS --connection=local
+    | grep -q 'changed=0.*failed=0'
+    && (echo 'Idempotence test: pass' && exit 0)
+    || (echo 'Idempotence test: fail' && exit 1)
