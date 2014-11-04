@@ -1,4 +1,7 @@
 ---
+- name: Include OS variables
+  include_vars: "{{ ansible_os_family }}.yml"
+
 - name: OpenSSL installed (Debian)
   sudo: yes
   apt:
