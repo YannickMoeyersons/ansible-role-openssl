@@ -1,5 +1,7 @@
 # Ansible Role: OpenSSL
 
+[![Ansible Galaxy](http://img.shields.io/badge/galaxy-novuso.openssl-000000.svg)](https://galaxy.ansible.com/list#/roles/2099)
+[![MIT License](http://img.shields.io/badge/license-MIT-003399.svg)](http://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/novuso/ansible-role-openssl.svg)](https://travis-ci.org/novuso/ansible-role-openssl)
 
 An Ansible Role that manages SSL certificates on RedHat/CentOS/Debian/Ubuntu.
