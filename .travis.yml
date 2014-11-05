@@ -10,9 +10,9 @@ before_install:
 
 install:
   - pip install ansible
+  - cd tests
 
 script:
-  - "cd tests"
   - "ansible-playbook $PLAYS --syntax-check"
   - "ansible-playbook $PLAYS --connection=local"
   - >
