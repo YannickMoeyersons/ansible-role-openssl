@@ -25,7 +25,7 @@
     state: directory
     owner: root
     group: root
-    mode: 0700
+    mode: "0700"
 
 - name: Certs directory
   sudo: yes
@@ -34,7 +34,7 @@
     state: directory
     owner: root
     group: root
-    mode: 0755
+    mode: "0755"
 
 - name: Self-signed certs
   sudo: yes
@@ -54,7 +54,7 @@
     dest: "{{ openssl_keys_path }}/{{ item.name }}.key"
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   with_items: openssl_import_keys
 
 - name: Imported SSL certs
@@ -64,5 +64,5 @@
     dest: "{{ openssl_certs_path }}/{{ item.name }}.crt"
     owner: root
     group: root
-    mode: 0644
+    mode: "0644"
   with_items: openssl_import_certs
